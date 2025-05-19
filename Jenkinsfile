@@ -11,7 +11,6 @@ pipeline {
             steps {
                 sh '''
                     echo "image version check"
-                    apt update -y
                 '''
             }
         }
