@@ -5,7 +5,7 @@ pipeline {
         stage(build) {
             agent {
                 docker {
-                    image 'alpine:latest'
+                    image 'ubuntu:22.04'
                 }
             }
             steps {
