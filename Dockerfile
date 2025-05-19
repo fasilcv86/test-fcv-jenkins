@@ -12,6 +12,4 @@ RUN apt update && \
 RUN echo "Hello from Containerfile" > /var/www/html/index.html
 EXPOSE 80
 RUN useradd fasil
-COPY script.sh /tmp/script.sh
-RUN chmod +x /tmp/script.sh && /bin/bash /tmp/script.sh
 CMD ["apache2ctl", "-D", "FOREGROUND"]
