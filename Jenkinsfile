@@ -3,14 +3,10 @@ pipeline {
 
     stages {
         stage(build) {
-            agent {
-                docker {
-                    image 'ubuntu:22.04'
-                }
-            }
             steps {
                 sh '''
-                    echo "image version check"
+                    echo "Docker build command...."
+                    docker build -t fasilcv/demoweb:latest .
                 '''
             }
         }
