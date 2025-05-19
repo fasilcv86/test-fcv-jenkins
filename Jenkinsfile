@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh '''
                     echo "image version check"
-                    cat /etc/os-*
+                    apt update -y
                 '''
             }
         }
