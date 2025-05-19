@@ -9,9 +9,11 @@ pipeline {
                 }
             }
             steps {
-                echo "this test from github"
+                sh '''
+                    echo "image version check"
+                    cat /etc/os-*
+                '''
             }
         }
-
     }
 }
